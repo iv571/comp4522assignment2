@@ -8,6 +8,7 @@ employee(ramesh).
 employee(joyce).
 employee(ahmad).
 employee(james).
+employee(joe).
 
 salary(john, 30000).
 salary(franklin, 40001).
@@ -17,6 +18,7 @@ salary(ramesh, 38000).
 salary(joyce, 25000).
 salary(ahmad, 25000).
 salary(james, 55000).
+salary(joe, 29000).
 
 department(john, research).
 department(franklin, research).
@@ -26,6 +28,8 @@ department(ramesh, research).
 department(joyce, research).
 department(ahmad, administration).
 department(james, headquarters).
+department(joe, administration).
+department(jane, administration).
 
 supervise(franklin, john).
 supervise(franklin, ramesh).
@@ -34,16 +38,20 @@ supervise(jennifer, alicia).
 supervise(jennifer, ahmad).
 supervise(james, franklin).
 supervise(james, jennifer).
+supervise(ahmad, joe).
+supervise(ahmad, jane).
 
 female(alicia).
 female(jennifer).
 female(joyce).
+female(jayne).
 
 male(john).
 male(franklin).
 male(ramesh).
 male(ahmad).
 male(james).
+male(joe).
 
 project(productx).
 project(producty).
@@ -68,6 +76,11 @@ works_on(ahmad, newbenefits, 5).
 works_on(jennifer, newbenefits, 20).
 works_on(jennifer, reorganization, 15).
 works_on(james, reorganization, 10).
+works_on(joe, reorganization, 30).
+works_on(joe, newbenefits, 10).
+works_on(jane, reorganization, 20).
+works_on(jane, producty, 10).
+works_on(jane, productx, 10).
 
 %-------------------------------------------------------------
 % Rules
@@ -76,6 +89,7 @@ superior(X,Y) :- supervise(X,Y).
 subordinate(X,Y) :- superior(Y,X).
 
 % Should you need to write new rules, please enter them here.
+
 
 %-------------------------------------------------------------
 % Queries
