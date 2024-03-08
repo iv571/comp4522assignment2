@@ -9,7 +9,7 @@ employee(joyce).
 employee(ahmad).
 employee(james).
 employee(joe).
-employee(Jonas).
+employee(jonas).
 
 salary(john, 30000).
 salary(franklin, 40001).
@@ -20,6 +20,7 @@ salary(joyce, 25000).
 salary(ahmad, 25000).
 salary(james, 55000).
 salary(joe, 29000).
+salary(jonas, 35000).
 
 department(john, research).
 department(franklin, research).
@@ -31,6 +32,7 @@ department(ahmad, administration).
 department(james, headquarters).
 department(joe, administration).
 department(jane, administration).
+department(jonas, administration).
 
 supervise(franklin, john).
 supervise(franklin, ramesh).
@@ -41,6 +43,7 @@ supervise(james, franklin).
 supervise(james, jennifer).
 supervise(ahmad, joe).
 supervise(ahmad, jane).
+supervise(ahmad, jonas).
 
 female(alicia).
 female(jennifer).
@@ -53,6 +56,7 @@ male(ramesh).
 male(ahmad).
 male(james).
 male(joe).
+male(jonas).
 
 project(productx).
 project(producty).
@@ -82,6 +86,9 @@ works_on(joe, newbenefits, 10).
 works_on(jane, reorganization, 20).
 works_on(jane, producty, 10).
 works_on(jane, productx, 10).
+works_on(jonas, productz, 20).
+works_on(jonas, productx, 10).
+works_on(jonas, producty, 10).
 
 %-------------------------------------------------------------
 % Rules
