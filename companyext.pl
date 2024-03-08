@@ -9,6 +9,7 @@ employee(joyce).
 employee(ahmad).
 employee(james).
 employee(joe).
+employee(Jonas).
 
 salary(john, 30000).
 salary(franklin, 40001).
