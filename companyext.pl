@@ -88,27 +88,25 @@ supreme_chief(SupremeChief) :- supervise(SupremeChief, _), supervise(_, SupremeC
 
 %-------------------------------------------------------------
 % Queries
-% Write your queries here .
+% Q1: female, computerization with an effort of 10 hours per week, and that have jennifer as a supervisor? If so, list them.
+% A: result is Alicia
+?- female(Employee), works_on(Employee, computerization, 10), supervise(jennifer, Employee). 
 
-% Q1: Are there any employees that are "female" and that work in project
- "computerization" with an effort of "10" hours per week, and that have
- "jennifer" as a supervisor? If so, list them.
+% Q2: Who is the employee who makes over 40000 dollars a year and works at the research department?
+% A: The Employee is Franklin
 
-female(Employee), works_on(Employee, computerization, 10), supervise(jennifer, Employee). % result is Alicia
-
-% Q2: Who is the employee who makes over "40000" dollars a year and works
-for the "research" department?
-
-salary(Employee, Amount), Amount > 40000, department(Employee, research). % The Employee is Franklin
+?- salary(Employee, Amount), Amount > 40000, department(Employee, research). 
 
 % Q3: Who is the supreme chief of this fictional company (aka the President)
+% A: Franklin is the Supreme Chief
 
-supreme_chief(SupremeChief). % Franklin is the Supreme Chief
+?- supreme_chief(SupremeChief). 
 
-% Q4: Who are the individuals that work on project "productx" with an *effort*
-of 20 or more hours a week?
 
-works_on(Individual, productx, Hours), Hours >= 20. % John works on productx more than 20 hours a week
+% Q4: Who are the individuals that work on project productx with an *effort* of 20 or more hours a week?
+% A: John works on productx more than 20 hours a week
+
+?- works_on(Individual, productx, Hours), Hours >= 20. 
 
 
 
