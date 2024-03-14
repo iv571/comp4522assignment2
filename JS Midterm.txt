@@ -1,0 +1,15 @@
+Assignment: No methods on movie objects
+
+No event delegation, lots of propagation
+
+Be careful about array methods, some array methods return 
+
+
+JS Project
+-Low hanging fruit: E'd the easy stuff
+-Time consuming: 
+
+
+Suggestions JavaScript
+-Make a global object to hold commonly used DOM objects
+-
