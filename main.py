@@ -61,7 +61,7 @@ print(ans2)
 print("Question 3") 
 print("Method ONE (Max Salary):")
 print(ans3a)
-print("Method TWO (Displays those that dont have supervisor):")
+print("Method TWO (Displays those that dont have supervisor but is supervising someone):")
 print(ans3b)
 
 print("Question 4")

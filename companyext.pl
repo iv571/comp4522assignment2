@@ -84,7 +84,7 @@ subordinate(X,Y) :- superior(Y,X).
 
 % Should you need to write new rules, please enter them here.
 
-supreme_chief(SupremeChief) :- supervise(SupremeChief, _), supervise(_, SupremeChief).
+supreme_chief(SupremeChief) :- supervise(SupremeChief, _), \+ (supervise(_, SupremeChief)).
 
 %-------------------------------------------------------------
 % Queries
@@ -106,7 +106,7 @@ supreme_chief(SupremeChief) :- supervise(SupremeChief, _), supervise(_, SupremeC
 % Q4: Who are the individuals that work on project productx with an *effort* of 20 or more hours a week?
 % A: John works on productx more than 20 hours a week
 
-?- works_on(Individual, productx, Hours), Hours >= 20. 
+?- findall(Individual-Hours, (works_on(Individual, productx, Hours), Hours >= 20), Individuals), write(Individuals), nl.
 
 
 
